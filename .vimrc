@@ -16,6 +16,9 @@ Plugin 'rdnetto/YCM-Generator'
 Plugin 'vim-scripts/upAndDown'
 Plugin 'scrooloose/syntastic'
 Plugin 'nvie/vim-flake8'
+Plugin 'vim-scripts/google.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'christoomey/vim-tmux-navigator'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
