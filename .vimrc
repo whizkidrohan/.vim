@@ -14,7 +14,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'rdnetto/YCM-Generator'
 Plugin 'vim-scripts/upAndDown'
-Plugin 'scrooloose/syntastic'
+"Plugin 'scrooloose/syntastic'
 Plugin 'nvie/vim-flake8'
 Plugin 'vim-scripts/google.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
@@ -49,6 +49,8 @@ nnoremap <Leader>tc :tabc<return>
 nnoremap <S-l> :tabn<return>
 nnoremap <S-h> :tabp<return>
 nnoremap <Leader>te :tabe<space>
+map <S-k> <PageUp>
+map <S-j> <PageDown>
 set number
 set colorcolumn=81
 highlight ColorColumn ctermbg=223
