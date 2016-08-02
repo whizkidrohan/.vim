@@ -19,6 +19,8 @@ Plugin 'nvie/vim-flake8'
 Plugin 'vim-scripts/google.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'rhysd/vim-clang-format'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -42,16 +44,16 @@ autocmd! bufwritepost .vimrc source %
 " Tab navigation made easy!
 nmap <C-n> :m +1<CR>
 nmap <C-m> :m -2<CR>
-nnoremap <S-h> <C-w>h
-nnoremap <S-j> <C-w>j
-nnoremap <S-k> <C-w>k
-nnoremap <S-l> <C-w>l
+"nnoremap <S-h> <C-w>h
+"nnoremap <S-j> <C-w>j
+"nnoremap <S-k> <C-w>k
+"nnoremap <S-l> <C-w>l
 nnoremap <Leader>tc :tabc<return>
-nnoremap <C-k> :tabn<return>
-nnoremap <C-j> :tabp<return>
+nnoremap <S-l> :tabn<return>
+nnoremap <S-h> :tabp<return>
 nnoremap <Leader>te :tabe<space>
 set number
-set colorcolumn=80
+set colorcolumn=81
 highlight ColorColumn ctermbg=223
 " Show trailing whitespace
 ":highlight ExtraWhitespace ctermbg=darkgreen guibg=lightgreen
@@ -77,3 +79,12 @@ set virtualedit=onemore
 filetype plugin indent on
 syntax on
 au BufNewFile,BufRead *.py set tabstop=4 softtabstop=4 shiftwidth=4 expandtab smarttab autoindent
+set foldmethod=syntax
+set foldlevel=1
+"set foldclose=all
+hi Folded ctermbg=Black
+hi TabLine ctermfg=White ctermbg=DarkGrey
+hi TabLineFill ctermfg=LightGrey ctermbg=DarkGrey
+"hi TabLineSel ctermfg=White ctermbg=DarkGrey
+let g:clang_format#style_options = {
+            \ "Standard" : "C++11"}
